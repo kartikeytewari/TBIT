@@ -15,7 +15,7 @@ int main()
     cout.precision(10);
 
 
-    // handiling data polls
+    // handiling data points
     // n is the total number of data polls
     // arr is the array that stores them
     ll n;
@@ -42,7 +42,7 @@ int main()
             cin >> l >> r >> new_val;
             for (ll j=l;j<=r;j++)
             {
-                arr[j]=new_val;
+                arr[j]=arr[j]+new_val;
             }
         }
         else
