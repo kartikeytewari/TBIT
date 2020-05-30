@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <climits>
 using namespace std;
 struct _ { ios_base::Init i; _() { ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL); } } _;
 
@@ -56,7 +58,7 @@ void update(int ul, int ur, long long uv, int l, int r, int ind) {
 int query(int ql, int qr, int l, int r, int ind) {
 	push(l, r, ind);
 
-	if (qr < l or r < ql) return LLONG_MAX;
+	if (qr < l or r < ql) return INT_MAX;
 
 	if (ql <= l and r <= qr) return tree[ind];
 
