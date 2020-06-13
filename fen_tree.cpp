@@ -65,11 +65,6 @@ int __min(int l, int r)
     return ans;
 }
 
-void update (int index, int val)
-{
-
-}
-
 int main()
 {
     int n;
