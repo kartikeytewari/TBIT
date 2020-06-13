@@ -101,6 +101,11 @@ int main()
             int index,val;
             cin >> index >> val;
             index++;
+            if (val>arr[index])
+            {
+                cout << "Invalid update process terminating" << endl;
+                return 0;
+            }
             arr[index]=val;
             update_left(index,val);
             update_right(index,val);
