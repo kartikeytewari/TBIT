@@ -4,8 +4,61 @@
 #include <vector>
 #include <iostream>
 #include <climits>
-
 using namespace std;
+
+
+// ===============================================
+void __print(int x) {cerr << x;}
+void __print(long x) {cerr << x;}
+void __print(float x) {cerr << x;}
+void __print(double x) {cerr << x;}
+void __print(unsigned x) {cerr << x;}
+void __print(long long x) {cerr << x;}
+void __print(long double x) {cerr << x;}
+void __print(unsigned long x) {cerr << x;}
+void __print(unsigned long long x) {cerr << x;}
+void __print(char x) {cerr << '\'' << x << '\'';}
+void __print(bool x) {cerr << (x ? "true" : "false");}
+void __print(const char *x) {cerr << '\"' << x << '\"';}
+void __print(const string &x) {cerr << '\"' << x << '\"';}
+ 
+template<typename T, typename V>
+void __print(const pair<T, V> &x)
+{
+    cerr << '{'; __print(x.first);
+    cerr << ','; __print(x.second);
+    cerr << '}';
+}
+ 
+template<typename T>
+void __print(const T &x)
+{
+    int f = 0;
+    cerr << '{';
+    for (auto &i : x)
+        cerr << (f++ ? "," : ""), __print(i);
+    cerr << "}";
+}
+ 
+void _print()
+{
+    cerr << "]\n";
+}
+ 
+template <typename T, typename... V>
+void _print(T t, V... v)
+{
+    __print(t);
+    if (sizeof...(v))
+        cerr << ", "; _print(v...);
+}
+ 
+#ifndef ONLINE_JUDGE
+#define debug(x...) cerr << "[" << #x << "] = ["; _print(x)
+#else
+#define debug(x...)
+#endif
+// ===============================================
 
 int n, q;
 vector<int> arr;
@@ -27,37 +80,27 @@ void build (int start = 0, int end = n - 1, int node = 1)
     return;
 }
 
-void update (int index, int val, int start, int end, int node)
+void update (int index, int val, int start=0, int end=n-1, int node=1)
 {
-    if (end<index or index<start)
+    if (start==end)
     {
-        return;
-    }
-    else if (start<=index and index<=end)
-    {
-        if (start==end)
-        {
-            arr[start]=val;
-            tree[index]=val;
-            return;
-        }
-        else
-        {
-            tree[index]=min(tree[index],val);
-            int mid=(start+end)/2;
-            update(index,val,start,mid,2*node);
-            update(index,val,mid+1,end,2*node+1);
-            return;
-        }
+        arr[start]=val;
+        tree[node]=val;
     }
     else
     {
         int mid=(start+end)/2;
-        update(index,val,start,mid,2*node);
-        update(index,val,mid+1,end,2*node+1);
+        if (start<=index and index<=mid)
+        {
+            update(index,val,start,mid,2*node);
+        }
+        else
+        {
+            update(index,val,mid+1,end,2*node+1);
+        }
         tree[node]=min(tree[2*node],tree[2*node+1]);
-        return;
     }
+    return;
 }
 
 int __min (int l, int r, int start = 0, int end = n - 1, int node = 1)
@@ -108,6 +151,7 @@ int main()
             int index, val;
             cin >> index >> val;
             update(index, val);
+            debug(tree);
         }
     }
 
