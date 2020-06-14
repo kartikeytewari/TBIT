@@ -1,14 +1,16 @@
 // input/output is given on 0-indexed reference
 // internal tree structure of segment tree is 1-indexed reference
 // and array is 0-indexed
+#include <vector>
+#include <iostream>
 
-#include <bits/stdc++.h>
 using namespace std;
 
+int n, q;
 vector<int> arr;
 vector<int> tree;
 
-void build (int start, int end, int node)
+void build (int start = 0, int end = n - 1, int node = 1)
 {
     if (start == end)
     {
@@ -24,7 +26,7 @@ void build (int start, int end, int node)
     return;
 }
 
-void update (int index, int val, int start, int end, int node)
+void update (int index, int val, int start = 0, int end = n - 1, int node = 1)
 {
     if (end < index and index < start)
     {
@@ -45,7 +47,7 @@ void update (int index, int val, int start, int end, int node)
 
 }
 
-int __min (int l, int r, int start, int end, int node)
+int __min (int l, int r, int start = 0, int end = n - 1, int node = 1)
 {
     if (r < start or end < l)
     {
@@ -63,7 +65,6 @@ int __min (int l, int r, int start, int end, int node)
 
 int main()
 {
-    int n;
     cin >> n;
 
     arr.resize(n, 0);
@@ -74,8 +75,8 @@ int main()
         cin >> arr[i];
     }
 
-    build(0, n - 1, 1);
-    int q;
+    build();
+
     cin >> q;
     for (int i = 0; i <= q - 1; i++)
     {
@@ -86,14 +87,14 @@ int main()
             // query
             int l, r;
             cin >> l >> r;
-            cout << __min(l, r, 0, n - 1, 1) << endl;
+            cout << __min(l, r) << endl;
         }
         else
         {
             // update
             int index, val;
             cin >> index >> val;
-            update(index, val, 0, n - 1, 1);
+            update(index, val);
         }
     }
 
