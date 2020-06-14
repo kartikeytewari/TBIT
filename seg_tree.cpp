@@ -10,55 +10,55 @@ vector<int> tree;
 
 void build (int start, int end, int node)
 {
-    if (start==end)
+    if (start == end)
     {
-        tree[node]=arr[start];
+        tree[node] = arr[start];
+        return;
     }
-    else
-    {
-        int mid=(start+end)/2;
-        build(start,mid,2*node);
-        build(mid+1,end,2*node+1);
-        tree[node]=tree[2*node]+tree[2*node+1];
-    }
+
+    int mid = (start + end) / 2;
+    build(start, mid, 2 * node);
+    build(mid + 1, end, 2 * node + 1);
+    tree[node] = min(tree[2 * node] , tree[2 * node + 1]);
+
     return;
 }
 
 void update (int index, int val, int start, int end, int node)
 {
-    if (end<index and index<start)
+    if (end < index and index < start)
     {
         return;
     }
-    else if (start<=index and index<=end)
+
+    if (start <= index and index <= end)
     {
-        tree[node]=min(tree[node],val);
+        tree[node] = min(tree[node], val);
         return;
     }
-    else
-    {
-        int mid=(start+end)/2;
-        update(index,val,start,mid,2*node);
-        update(index,val,mid+1,end,2*node+1);
-        return;
-    }
+
+    int mid = (start + end) / 2;
+    update(index, val, start, mid, 2 * node);
+    update(index, val, mid + 1, end, 2 * node + 1);
+    tree[node] = min(tree[2 * node] , tree[2 * node + 1]);
+    return;
+
 }
 
 int __min (int l, int r, int start, int end, int node)
 {
-    if (r<start or end<l)
+    if (r < start or end < l)
     {
         return INT_MAX;
     }
-    else if (l<=start and end<=r)
+
+    if (l <= start and end <= r)
     {
         return tree[node];
     }
-    else
-    {
-        int mid=(start+end)/2;
-        return min(__min(l,r,start,mid,2*node), __min(l,r,mid+1,end,2*node+1));
-    }
+
+    int mid = (start + end) / 2;
+    return min(__min(l, r, start, mid, 2 * node), __min(l, r, mid + 1, end, 2 * node + 1));
 }
 
 int main()
@@ -66,34 +66,34 @@ int main()
     int n;
     cin >> n;
 
-    arr.resize(n,0);
-    tree.resize(4*n,0);
+    arr.resize(n, 0);
+    tree.resize(4 * n, 0);
 
-    for (int i=0;i<=n-1;i++)
+    for (int i = 0; i <= n - 1; i++)
     {
         cin >> arr[i];
     }
 
-    build(0,n-1,1);
+    build(0, n - 1, 1);
     int q;
     cin >> q;
-    for (int i=0;i<=q-1;i++)
+    for (int i = 0; i <= q - 1; i++)
     {
         int type;
         cin >> type;
-        if (type==1)
+        if (type == 1)
         {
             // query
-            int l,r;
+            int l, r;
             cin >> l >> r;
-            cout << __min(l,r,0,n-1,1) << endl;
+            cout << __min(l, r, 0, n - 1, 1) << endl;
         }
         else
         {
             // update
-            int index,val;
+            int index, val;
             cin >> index >> val;
-            update(index,val,0,n-1,1);
+            update(index, val, 0, n - 1, 1);
         }
     }
 
