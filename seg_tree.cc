@@ -3,6 +3,7 @@
 // and array is 0-indexed
 #include <vector>
 #include <iostream>
+#include <climits>
 
 using namespace std;
 
@@ -99,24 +100,14 @@ int main()
             // query
             int l, r;
             cin >> l >> r;
-<<<<<<< HEAD:seg_tree.cpp
-            display();
             cout << __min(l, r, 0, n - 1, 1) << endl;
-=======
-            cout << __min(l, r) << endl;
->>>>>>> f3d4bf5618eb3a641ae5deb67be86d2af0bd8e35:seg_tree.cc
         }
         else
         {
             // update
             int index, val;
             cin >> index >> val;
-<<<<<<< HEAD:seg_tree.cpp
-            update(index, val, 0, n - 1, 1);
-            display();
-=======
             update(index, val);
->>>>>>> f3d4bf5618eb3a641ae5deb67be86d2af0bd8e35:seg_tree.cc
         }
     }
 
