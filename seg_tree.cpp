@@ -26,23 +26,35 @@ void build (int start, int end, int node)
 
 void update (int index, int val, int start, int end, int node)
 {
-    if (end < index and index < start)
+    if (end<index or index<start)
     {
         return;
     }
-
-    if (start <= index and index <= end)
+    else if (start<=index and index<=end)
     {
-        tree[node] = min(tree[node], val);
+        if (start==end)
+        {
+            arr[start]=min(arr[start],val);
+            tree[index]=arr[start];
+            return;
+        }
+        else
+        {
+            tree[index]=min(tree[index],val);
+            int mid=(start+end)/2;
+            update(index,val,start,mid,2*node);
+            update(index,val,mid+1,end,2*node+1);
+            return;
+        }
+    }
+    else
+    {
+        int mid=(start+end)/2;
+        update(index,val,start,mid,2*node);
+        update(index,val,mid+1,end,2*node+1);
+        tree[node]=min(tree[2*node],tree[2*node+1]);
         return;
     }
-
-    int mid = (start + end) / 2;
-    update(index, val, start, mid, 2 * node);
-    update(index, val, mid + 1, end, 2 * node + 1);
-    tree[node] = min(tree[2 * node] , tree[2 * node + 1]);
-    return;
-
 }
 
 int __min (int l, int r, int start, int end, int node)
@@ -86,6 +98,7 @@ int main()
             // query
             int l, r;
             cin >> l >> r;
+            display();
             cout << __min(l, r, 0, n - 1, 1) << endl;
         }
         else
@@ -94,6 +107,7 @@ int main()
             int index, val;
             cin >> index >> val;
             update(index, val, 0, n - 1, 1);
+            display();
         }
     }
 
