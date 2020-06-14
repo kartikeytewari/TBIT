@@ -8,9 +8,8 @@ vector<int> arr;
 vector<int> left_tree;
 vector<int> right_tree;
 
-void update_left (int index, int val)
+void update_left (int index, int val, int n)
 {
-    int n=(sizeof(arr)/sizeof(arr[0]))-1;
     while (index<=n)
     {
         left_tree[index]=min(left_tree[index],val);
@@ -76,7 +75,7 @@ int main()
     for (int i=1;i<=n;i++)
     {
         cin >> arr[i];
-        update_left(i,arr[i]);
+        update_left(i,arr[i],n);
         update_right(i,arr[i]);
     }
 
@@ -107,7 +106,7 @@ int main()
                 return 0;
             }
             arr[index]=val;
-            update_left(index,val);
+            update_left(index,val,n);
             update_right(index,val);
         }
     }
