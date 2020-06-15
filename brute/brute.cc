@@ -1,11 +1,16 @@
 // input/output is given on 0-indexed reference
 // Internal structure is also 0-indexed reference
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <iostream>
+#include <iomanip>
 using namespace std;
+struct _ { ios_base::Init i; _() { ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL); } } _;
 
 int main()
 {
+    clock_t z = clock();
+
     int n;
     cin >> n;
     vector<int> arr(n, 0);
@@ -32,7 +37,7 @@ int main()
             {
                 ans = min(ans, arr[j]);
             }
-            cout << ans << endl;
+            // cout << ans << endl;
         }
         else
         {
@@ -43,5 +48,6 @@ int main()
         }
     }
 
+    cout << n << "," << ((double)(clock() - z) / CLOCKS_PER_SEC) * 1e6 << "\n";
     return 0;
 }
