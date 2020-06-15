@@ -1,0 +1,24 @@
+// default value of start is 0
+// default value of end is n-1
+// default value of node in segment tree is 1
+// since the tree is 1-indexed internally
+// although input output happen at 0-indexed reference
+build (start, end, node)
+{
+    if (start and end are equal)
+    {
+	// tree node would be similar to arr value at start or end
+        tree[node] = arr[start];
+    }
+
+    // mid is node between start and end
+    // we build left tree
+    build(start, mid, 2 * node);
+    // we build right tree
+    build(mid + 1, end, 2 * node + 1);
+
+    // we update the value of tree node from the left and right sub-tree
+    tree[node] = min(tree[2*node] , tree[2*node+1]);
+}
+
+

@@ -1,0 +1,6 @@
+
+// index is the node to be updated
+// val is the new value at the index
+arr[index] = val
+
+

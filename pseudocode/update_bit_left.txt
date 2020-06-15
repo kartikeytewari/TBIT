@@ -1,0 +1,15 @@
+
+
+// builds and update left tree
+// new_val is the value by which we update node
+update_bit_left (index, new_val)
+{
+    n=size of input array
+    while (index is less than equal to n)
+    {
+        left_tree[index]=min(left_tree[index],new_val);
+        index=parent(index)
+    }
+}
+
+

@@ -1,0 +1,13 @@
+
+// builds and update right tree
+// new_val is the value by which we update node
+update_bit_right (index, new_val)
+{
+    while (index is greater than equal to 1)
+    {
+        right_tree[index]=min(right_tree[index],new_val);
+        index=parent(index)
+    }
+}
+
+
