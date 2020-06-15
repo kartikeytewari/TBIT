@@ -1,0 +1,28 @@
+
+
+update (index,val,start,end,node)
+{
+    if (start is equal to end)
+    {
+        arr[start] = val;
+        tree[node] = val;
+    }
+
+    // mid is node between start and end
+    if (index is between start and mid node)
+    {
+	// update left tree
+        update(index, val, start, mid, 2 * node);
+    }
+    else
+    {
+	// if index is between mid and end node
+	// update right tree
+        update(index, val, mid + 1, end, 2 * node + 1);
+    }
+    // we update tree node with left and right sub-tree values
+    tree[node] = min(tree[2 * node], tree[2 * node + 1]);
+
+}
+
+

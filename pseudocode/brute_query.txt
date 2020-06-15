@@ -1,0 +1,8 @@
+
+ans = INT_MAX; // initialized to maximum value of integer
+for (j is between l and r both inclusive)
+{
+	ans = min(ans, arr[j]);
+}
+
+

@@ -1,0 +1,46 @@
+
+//provides minimum value between l and r
+min_query(l, r)
+{
+    ans=INT_MAX; // initialised to maximum value of integer
+
+    // get values of right tree by climbing left tree
+    index=l;
+    while (index is less than equal to r)
+    {
+	// checks if this is last traversable node
+        father_node=parent(index);
+        if (father_node is less than equal to r)
+        {
+            ans=min(ans,right_tree[index]);
+        }       
+        index=parent(index);
+    }
+
+    // get values of left tree by climbing right tree
+    index=r;
+    int splitter; 
+    // splitter will store the common last value 
+    // of both traverses
+    while (index is greater than l)
+    {
+	// checks if this is last traversable node
+        father_node=parent(index);
+        if (father_node is greater than equal to l)
+        {
+            ans=min(ans,left_tree[index]);
+        }
+        else
+        {
+            splitter=index;
+        }
+        index=parent(index);
+    }
+ 
+    ans=min(ans,arr[splitter]);
+    return ans;
+}
+
+
+
+
