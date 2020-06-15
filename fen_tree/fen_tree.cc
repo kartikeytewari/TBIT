@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <iostream>
+#include <climits>
+#include <iomanip>
 using namespace std;
 
 vector<int> arr;
@@ -67,6 +69,8 @@ int __min(int l, int r)
 
 int main()
 {
+    clock_t z = clock();
+
     int n;
     cin >> n;
     arr.resize(n + 1, INT_MAX);
@@ -93,7 +97,8 @@ int main()
             cin >> l >> r;
             l++;
             r++;
-            cout << __min(l, r) << endl;
+            // cout << __min(l, r) << endl;
+            __min(l,r);
         }
         else
         {
@@ -111,5 +116,8 @@ int main()
             update_right(index, val);
         }
     }
+    cout << n << " " << (int)(((double)(clock() - z) / CLOCKS_PER_SEC)*1e6)<< "\n";
+   
+
     return 0;
 }

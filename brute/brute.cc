@@ -4,6 +4,9 @@
 #include <vector>
 #include <iostream>
 #include <iomanip>
+#include <climits>
+#include <time.h>
+#include <cmath>
 using namespace std;
 struct _ { ios_base::Init i; _() { ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL); } } _;
 
@@ -47,7 +50,6 @@ int main()
             arr[index] = val;
         }
     }
-
-    cout << n << "," << ((double)(clock() - z) / CLOCKS_PER_SEC) * 1e6 << "\n";
+    cout << n << " " << (int)(((double)(clock() - z) / CLOCKS_PER_SEC)*1e6)<< "\n";
     return 0;
 }
