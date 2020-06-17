@@ -1,0 +1,173 @@
+[33mcommit ff010afdb59408f89523554e81825ec2cf23c228[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ausmosian <abhijeet.srivastava6499@gmail.com>
+Date:   Tue Jun 16 01:47:36 2020 +0530
+
+    Final
+
+[33mcommit 3c4b76d0c18ca5031c5aa2296f4f6118713b2f14[m
+Merge: 49b6a71 6746065
+Author: Ausmosian <abhijeet.srivastava6499@gmail.com>
+Date:   Tue Jun 16 01:42:26 2020 +0530
+
+    Merge branch 'master' of https://github.com/kartikeytewari/fenwick_tree_query
+
+[33mcommit 49b6a71f9828ecb5602ae84eab45ff4e931c4431[m
+Author: Ausmosian <abhijeet.srivastava6499@gmail.com>
+Date:   Tue Jun 16 01:39:52 2020 +0530
+
+    Final
+
+[33mcommit 67460651f911adfe5b023eaea613e25f86efd1f4[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Mon Jun 15 20:31:23 2020 +0530
+
+    added pseudocode
+
+[33mcommit a8499229074ef067cf16084754ebdc4eaf80e1cc[m
+Merge: 910d1c8 29b8389
+Author: Ausmosian <abhijeet.srivastava6499@gmail.com>
+Date:   Mon Jun 15 16:13:04 2020 +0530
+
+    Organised and Brute dump
+
+[33mcommit 910d1c8459765a103118f755655257c0b6838707[m
+Author: Ausmosian <abhijeet.srivastava6499@gmail.com>
+Date:   Mon Jun 15 16:08:37 2020 +0530
+
+    Organised and Brute dump
+
+[33mcommit 29b8389e53d1de18a78cc67cf1320e6282c566d7[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Mon Jun 15 00:15:49 2020 +0530
+
+    fen_tree debugged
+
+[33mcommit 52179ec31ceb1d78fd482e018618da997f6c9a3f[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Sun Jun 14 23:51:39 2020 +0530
+
+    seg_tree corrected
+
+[33mcommit d0ef847c56e33096ef9214f715a32a4a4f9b3657[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Sun Jun 14 23:49:09 2020 +0530
+
+    corrected seg_tree code
+
+[33mcommit c0f73de63a85731834b7f5e19becb833adf518f1[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Sun Jun 14 23:34:46 2020 +0530
+
+    seg_tree.cc
+
+[33mcommit 5842cfb5056d53aedc04ccc821a2af49a4386bea[m
+Merge: 7580554 f3d4bf5
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Sun Jun 14 23:33:10 2020 +0530
+
+    corrected seg_tree.cc
+
+[33mcommit 75805549b8a13e920243e292e497c1dae302c2b2[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Sun Jun 14 23:20:28 2020 +0530
+
+    changed seg_tree.cpp
+
+[33mcommit f3d4bf5618eb3a641ae5deb67be86d2af0bd8e35[m
+Author: Abhijeet Srivastava <ausmosian@Abhijeets-MacBook-Pro.local>
+Date:   Sun Jun 14 20:43:40 2020 +0530
+
+    Update in Segment Tree
+
+[33mcommit 224a94a01ce29051eec810b098b50288aaeaadcb[m
+Author: Abhijeet Srivastava <ausmosian@Abhijeets-MacBook-Pro.local>
+Date:   Sun Jun 14 20:15:09 2020 +0530
+
+    Correction in Segment Tree
+
+[33mcommit 9df620d522f595edbad8155d22e3faf548077304[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Sat Jun 13 17:06:51 2020 +0530
+
+    removed fen_tree binary file
+
+[33mcommit 4b40d47a8a7df2cd0ca9e7cd5c3f3cdfd4f67ba4[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Sat Jun 13 17:06:16 2020 +0530
+
+    added new_value check on update request
+
+[33mcommit e46d11de4859b94cd287a291c5feb279f010db78[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Sat Jun 13 12:27:57 2020 +0530
+
+    update fen_tree
+
+[33mcommit c2c65682bb7d9d869dc5a4e44365c9bc15206231[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Thu Jun 11 21:36:44 2020 +0530
+
+    deleted files
+
+[33mcommit c5ae5ad6cbfbf2b5aa3bf324d4fb28ddfbd8555a[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Thu Jun 11 21:35:07 2020 +0530
+
+    deleted files
+
+[33mcommit f926a562241d117d979a87d1c79e1d95ac0f13c9[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Thu Jun 11 16:43:00 2020 +0530
+
+    Some changes
+    added fenwick tree code
+    added brute force code insted of validator
+    refactored segment tree code
+
+[33mcommit 7a9d537e818bfbde8daf17eefd46b1f231203773[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Sat May 30 22:51:27 2020 +0530
+
+    changes libraries and took care of integer overflow in query function
+
+[33mcommit c41c9dee7c61a27ae5faefd68687bbb7f543bad9[m
+Author: Ausmosian <39672173+Ausmosian@users.noreply.github.com>
+Date:   Thu May 21 19:34:14 2020 +0530
+
+    Update segment_tree.cc
+
+[33mcommit d1634132729225124b7af09c8faa9849f91c8ddb[m
+Author: Ausmosian <39672173+Ausmosian@users.noreply.github.com>
+Date:   Thu May 21 19:31:14 2020 +0530
+
+    Create segment_tree.cc
+    
+    Segment tree to handle Min query and Increment update.
+
+[33mcommit 3f651dec0e5de50acf0a46186ab7ff01d18d0131[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Wed May 20 18:52:07 2020 +0530
+
+    update validator.cpp
+
+[33mcommit 52a14f331a39319282c1223fd79a4722a666fed3[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Tue May 5 13:36:56 2020 +0530
+
+     On branch master
+     Your branch is up to date with 'origin/master'.
+    
+     Changes to be committed:
+            modified:   LICENSE
+            modified:   README.md
+            new file:   random_input_generator.cpp
+            new file:   validator.cpp
+    
+    The files od LICENSE an README.md have been updated
+    The validator and random_input_generator have been added.
+
+[33mcommit a2a4a26d787a4854de6be3c05d140a446d9f6944[m
+Author: Kartikey Tewari <kartikeya30@gmail.com>
+Date:   Mon Apr 27 13:59:12 2020 +0530
+
+    Initial commit

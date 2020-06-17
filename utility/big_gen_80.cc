@@ -32,9 +32,10 @@ int rand(int a, int b) {
 
 int main(int argc, char const *argv[])
 {
-	srand(atoi(argv[1]));
+	int r=atoi(argv[1]);
+	srand(r);
 
-	int n = rand(2e4, 1e6); cout << n << "\n";
+	int n = 2e4+2+(r-1)*900; cout << n << "\n";
 	vector<int> a(n, 0);
 	for (int i = 0; i <= n - 1; i++) cout << (a[i] = rand(1, 1e9)) << " ";
 	cout << "\n";

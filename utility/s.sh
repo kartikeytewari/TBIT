@@ -1,4 +1,4 @@
-for((i=1;i<=1000;i++)); do
+for((i=1;i<=1001;i++)); do
 	echo s $i
 	echo 20
 	utility/small_gen_20 $i > utility/input1.txt
@@ -31,8 +31,8 @@ for((i=1;i<=1000;i++)); do
 	fen_tree/fen_tree < utility/input1.txt >> fen_tree/fen_tree_100.txt
 done
 
-for((i=1;i<=1000;i++)); do
-	echo $i
+for((i=1;i<=1090;i++)); do
+	echo b $i
 	echo 20
 	utility/big_gen_20 $i > utility/input1.txt
 	seg_tree/seg_tree < utility/input1.txt >> seg_tree/seg_tree_20.txt
