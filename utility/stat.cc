@@ -47,30 +47,30 @@ inline void fastio() {ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(
 int dx[] = { -1, 0, 1, 0, -1, -1, 1, 1};
 int dy[] = {0, 1, 0, -1, -1, 1, 1, -1};
 
-double actual(int alg,int n,int q=0){
-	if(alg==0){
-		return (n*q)/1e2;
+double actual(int alg, int n, int q = 0) {
+	if (alg == 0) {
+		return (n * q) / 1e2;
 	}
-	else return (alg*log2(n)*(n+q))/1e2;
+	else return (alg * log2(n) * (n + q)) / 1e2;
 }
-vector<string> title={"\nbrute","\nseg_tree","\nfen_tree"};
+vector<string> title = {"\nbrute", "\nseg_tree", "\nfen_tree"};
 
 int main(int argc, const char* argv[]) {
 	fastio();
 
-	int a=argv[1][0]-'0';
-	int r=argv[1][1]-'0';
-	int n=0,t=0,cnt=0;
-	double avg=0;
-	
-	while(cin>>n){
-		cin>>t;
+	int a = argv[1][0] - '0';
+	int r = argv[1][1] - '0';
+	int n = 0, t = 0, cnt = 0;
+	double avg = 0;
+
+	while (cin >> n) {
+		cin >> t;
 		cnt++;
 
-		avg+=(t-actual(a,n,((n*r*2)/10)));
+		avg += (t - actual(a, n, ((n * r * 2) / 10)));
 	}
-	if(r==1) cout<<title[a]<<"\t";
+	if (r == 1) cout << title[a] << "\t";
 	cout << fixed << setprecision(2);
-	cout<<(avg/cnt)<<" ms\t";
+	cout << (avg / cnt) << " ms\t";
 	return 0;
 }

@@ -1,0 +1,9 @@
+Now, to see how the actual runtime deviate from theoretical runtime, we find mean deviation of actual runtime from theoretical runtime, i.e
+
+	summation(actual_runtime - theoretical run_time)/N
+
+where N = number of observations.
+
+Here we observe that brute_force has a negative deviation from theoretical value, which decreases as query increase.
+
+Also, both segment tree and fenwick tree have positive deviation, which increase as query increase, but deviation of fenwick tree is greater that that of segment tree(app 1.5 times).

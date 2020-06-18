@@ -51,20 +51,20 @@ int dy[] = {0, 1, 0, -1, -1, 1, 1, -1};
 int main(int argc, const char* argv[]) {
 	fastio();
 
-	int t=atoi(argv[1])*1000;
-	map<int,vector<int>> freq;
-	while(t--){
-		int n,tim; cin>>n>>tim;
-		freq[n].push_back(tim); 
+	int t = atoi(argv[1]) * 1000;
+	map<int, vector<int>> freq;
+	while (t--) {
+		int n, tim; cin >> n >> tim;
+		freq[n].push_back(tim);
 	}
 
-	cout<<freq.size()<<endl;
-	for(auto i: freq){
-		cout<<i.ff<<"->";
-		for(auto j: i.ss) cout<<j<<", ";
-		cout<<endl;
+	cout << freq.size() << endl;
+	for (auto i : freq) {
+		cout << i.ff << "->";
+		for (auto j : i.ss) cout << j << ", ";
+		cout << endl;
 	}
-	cout<<endl;
+	cout << endl;
 
 	return 0;
 }
