@@ -1,9 +1,22 @@
-Now, to see how the actual runtime deviate from theoretical runtime, we find mean deviation of actual runtime from theoretical runtime, i.e
+We deffine offset as the number of extra operations done, which were not accomodated in the theoretical time complexity.
 
-	summation(actual_runtime - theoretical run_time)/N
+We try to find the average number of relative offsets, to loosely predict the correlation between practical and theoretical runtime of algorithm in similar environments.
 
-where N = number of observations.
+For this, we use the formulae:
 
-Here we observe that brute_force has a negative deviation from theoretical value, which decreases as query increase.
+	summation((App. practical operations-theoretical operations)/theoretical operations)/N
 
-Also, both segment tree and fenwick tree have positive deviation, which increase as query increase, but deviation of fenwick tree is greater that that of segment tree(app 1.5 times).
+where,
+	App. practical operations=number of operations processed by machine to run the entire program(approximated by runtime).
+	Theoretical Operations=number of operations as proposed by the theoretical complexity.
+	N=number  of observations.
+
+From the statistics above, we derive the following observations:
+
+1. Values are negative for brute and remain nearly same as queries increase. This means that the upper bound given by the theoretical complexity is loose, thus proposing more operation than actually occured
+
+2. Values are possitive for seg_tree, and increase with queries. This means that the theoretical complexity depict an average number of operations, which may be at times less than those actually occured. This is because there are operations like pushing and popping in recursive call stack, and various ignored O(1) operations while calculating time complexity theoretically(like if, elses, return statements etc). This also explains increase as we increase queries, which means that these extra operations happen in each query.
+
+3. The values for fen_tree are ositive and increase with queries, suggesting again that the theoretical time complexity does not account for various constant operations like bitwise operations etc.The increasing values with increasing queries, means the same as seg_tree, these extra operations happen at each query.
+
+4. Except initially, the average offset is greater in seg_tree, than fen_tree. This is expected as recursive operations are indeed heavier than simple iterative ones, because of involvement of call stack, which require repetitive push and pop operations.
