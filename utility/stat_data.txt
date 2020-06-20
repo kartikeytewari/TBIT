@@ -1,4 +1,0 @@
-               20%         40%         60%         80%        100%
-brute       -0.78 ops   -0.78 ops   -0.78 ops   -0.79 ops   -0.76 ops	
-seg_tree    0.71 ops    1.27 ops    1.58 ops    1.66 ops    2.40 ops	
-fen_tree    0.89 ops    0.91 ops    1.08 ops    1.23 ops    1.21 ops	
