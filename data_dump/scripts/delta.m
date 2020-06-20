@@ -1,6 +1,6 @@
-brute=dlmread("../data/brute_60_dw.txt"," ");
-seg_tree=dlmread("../data/seg_tree_60_dw.txt"," ");
-fen_tree=dlmread("../data/fen_tree_60_dw.txt"," ");
+brute=dlmread("../data/brute_delta.txt"," ");
+seg_tree=dlmread("../data/segment_delta.txt"," ");
+fen_tree=dlmread("../data/fenwick_delta.txt"," ");
 
 n=brute(:,1);
 time_brute=brute(:,2);
@@ -16,5 +16,5 @@ time_fen=fen_tree(:,2);
 plot(n,time_fen,";TBIT;");
 hold off
 
-title("Time Complexity of different algorithms (query is 60% of n)");
+title("Deviation of different algorithms from theoretical Time Complexity");
 legend("location","northwest");
