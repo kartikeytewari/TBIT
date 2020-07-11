@@ -16,5 +16,8 @@ time_fen=fen_tree(:,2);
 plot(n,time_fen,";TBIT;");
 hold off
 
-title("Time Complexity of different algorithms (query is 40% of n)");
+x_val=xlabel("Sum of update and query operations");
+y_val=ylabel("Time in microseconds");
 legend("location","northwest");
+set(x_val, "linewidth", 4, "fontsize", 20);
+set(y_val, "linewidth", 4, "fontsize", 20);
