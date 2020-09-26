@@ -28,7 +28,6 @@ Languages Used:
 <li> C/C++ </li>
 <li> Bash </li>
 <li> Matlab </li>
-<li> WSL </li>
 </ol>
 
 <hr>
