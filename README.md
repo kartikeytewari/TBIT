@@ -1,4 +1,4 @@
-# Transitive Binary Indexed Tree
+# Transitive Binary Indexed Trees
 This is the code base for a Research Paper I wrote along with my co-authors at Department of Computer Science and Engineering, National Institute of Technology, Himachal Pradesh. The paper can be found <a href="https://link.springer.com/article/10.1007%2Fs41870-021-00685-z">here</a>.
 
 The research paper is published by `Springer` in `International Journal of Information Technology`, a `scopus indexed` journal.
