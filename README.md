@@ -21,4 +21,10 @@ Languages Used:
 - Bash
 - Python
 
+Authors of paper are:
+- Kartikey Tewari
+- Abhijeet Shrivastava
+- Arun Kumar Yadav
+- Divakar Yadav
+
 Fell free to ping me for discussions/queries at kartikeya30@gmail.com
