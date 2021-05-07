@@ -1,13 +1,6 @@
 # Transitive Binary Indexed Tree
-This is the code base for a Research Paper we wrote. The paper can be found <a href="">here</a>.
+This is the code base for a Research Paper I wrote along with my co-authors at Department of Computer Science and Engineering, National Institute of Technology, Himachal Pradesh. The paper can be found <a href="https://link.springer.com/article/10.1007%2Fs41870-021-00685-z">here</a>.
 <hr>
-
-For cloning the repository use the commands:
-<ol>
-<li>Navigate to the folder where you want to clone the repository from the command line </li>
-<li> Run the command git clone https://github.com/kartikeytewari/TBIT </li>
-<li> Most scripts would run as it is, although path may be needed to reconfigured </li>
-</ol>
 
 Keywords:
 <ol>
@@ -21,14 +14,15 @@ Keywords:
 <li> Binary number system </li>
 <li> Range minimum query </li>
 <li> Transitive Functions </li>
+<li> Number Theory </li>
 </ol>
 
 Languages Used:
 <ol>
 <li> C/C++ </li>
 <li> Bash </li>
-<li> Matlab </li>
+<li> Python </li>
 </ol>
 
 <hr>
-Fell free to ping developer for features/bugs at kartikeya30@gmail.com
+Fell free to ping me for discussions/queries at kartikeya30@gmail.com
